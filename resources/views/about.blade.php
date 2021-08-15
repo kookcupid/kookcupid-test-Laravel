@@ -8,6 +8,15 @@
 </head>
 <body>
     <h1>ยินดีตอนรับ</h1>
+    <p>Test Larabel</p>
+
+    <p>ที่อยู่{{$address}}</p>
+    <p>เบอร์ติดต่อ{{$tel}}</p>
+    <p>อีเมล{{$email}}</p>
+    <a href="{{url('/')}}">Home</a>
+    <a href="{{route('admin')}}">Admin</a>
+    <a href="{{route('member')}}">Member</a>
+    <a href="{{route('about')}}">About</a>
 
 </body>
 </html>

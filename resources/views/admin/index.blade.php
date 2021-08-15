@@ -10,7 +10,7 @@
 
     <?php
 
-    $user ="kookcupid";
+    $user ="Natthapon";
     $arr = array("Home","Member","About","Contact");
 
     ?>

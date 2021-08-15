@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\MemberController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,16 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
-Route::get('/about', function () {
-    return view('about');
-}); 
+Route::get('/about', [AboutController::class,'index'])->name('about');
 
-Route::get('/member', function () {
-    return view('member.index');
-}); 
+Route::get('/member', [MemberController::class,'index'])->name('member');
 
-Route::get('/admin', function () {
-    return view('admin.index');
-}); 
+Route::get('/admin', [AdminController::class,'index'])->name('admin')->middleware('check');
